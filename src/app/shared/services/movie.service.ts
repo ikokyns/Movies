@@ -13,7 +13,6 @@ export class MovieService {
 		for(let i=0; i<Examples.length; i++){
 			this.movies.push(new Movie(Examples[i].id, Examples[i].name, Examples[i].director, Examples[i].imageURL, Examples[i].duration, Examples[i].releaseDate, Examples[i].genres));
 		};
-		//console.log(this.movies);
 
 		return new Observable((o: Observer<any>) => {
       		o.next(this.movies)
